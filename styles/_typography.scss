@@ -1,0 +1,63 @@
+h1,
+.h1 {
+    @include font(36px, 900);
+    line-height: 35px;
+
+    @include desktop {
+        @include font(40px, 900);
+    }
+}
+
+h2,
+.h2 {
+    @include font(32px, 900);
+    line-height: 35px;
+
+    @include desktop {
+        @include font(36px, 900);
+    }
+}
+
+h3,
+.h3 {
+    @include font(28px, 900);
+    line-height: 35px;
+
+    @include desktop {
+        @include font(32px, 900);
+    }
+}
+
+h4,
+.h4 {
+    @include font(24px, 600);
+    line-height: 35px;
+
+    @include desktop {
+        @include font(28px, 600);
+    }
+}
+
+label {
+    @include font(16px, 600);
+}
+
+.inline-link {
+    border-bottom: 2px solid $color-red;
+    &:hover,
+    &:focus {
+        color: $color-red;
+    }
+}
+
+.section-title {
+    display: inline-flex;
+    padding-bottom: 15px;
+    font-weight: 900;
+    border-bottom: 4px solid $color-red;
+}
+
+.section-header {
+    color: $color-red;
+    text-align: center;
+}

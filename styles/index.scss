@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;900&display=swap');
+
+// Base
+@import './variables';
+@import './mixins';
+@import './base';
+@import './typography';
+@import './layout';
+@import './buttons';
+
+// Components
+@import './footer';
+@import './productCard';
+@import './navigation';
+@import './callout';
+@import './contactCard';
+@import './contactForm';
+@import './heroCard';
+@import './productDetail';
+@import './productPage';
+@import './search';
+
+html, body {
+  height: 100%;
+}
+
+#__next {
+  height: 100%;
+}
+
+.app {
+  height: 100%;
+  min-height: 100%;
+	display: flex;
+	flex-direction: column;
+
+  footer {
+    margin-top: auto;
+  }
+}

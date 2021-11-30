@@ -1,0 +1,37 @@
+.productResultHeader {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-bottom: 20px;
+
+    @media (min-width: 500px) {
+        flex-direction: row;
+    }
+
+    &__label {
+        margin-bottom: 5px;
+    }
+
+    &__select {}
+
+    &__category {
+        display: inline-flex;
+        flex-direction: column;
+    
+        &__label {}
+    
+        &__select {}
+    }
+
+    &__result-count {
+        @include font(16px, 600);
+        color: $color-red;
+        line-height: 15px;
+        margin: 15px 0 0;
+
+        @media (min-width: 500px) {
+            margin: 0;
+            align-self: flex-end;
+        }
+    }
+}

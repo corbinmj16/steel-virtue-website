@@ -1,0 +1,53 @@
+.btn {
+    @include font(14px, 600);
+    display: block;
+    padding: 6px 15px;
+    text-transform: uppercase;
+    transition: all .2s linear;
+    text-align: center;
+    
+    &:hover {
+        cursor: pointer;
+    }
+    
+    @include tablet {
+        @include font(16px, 600);
+        padding: 6px 18px;
+    }
+}
+
+.btn--primary {
+    background-color: $color-red;
+    color: $color-white;
+    border: none;
+
+    &:hover,
+    &:focus {
+        background-color: $color-black;
+        cursor: pointer;
+    }
+}
+
+.btn--alt {
+    border: 1px solid $color-red;
+    color: $color-red;
+
+    &:hover,
+    &:focus {
+        color: $color-black;
+        border: 1px solid $color-black;
+    }
+}
+
+.btn--white {
+    background-color: $color-white;
+    color: $color-red;
+    border: 1px solid $color-white;
+
+    &:hover,
+    &:focus {
+        background-color: $color-red;
+        border: 1px solid $color-white;
+        color: $color-white;
+    }
+}

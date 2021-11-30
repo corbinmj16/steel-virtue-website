@@ -1,0 +1,96 @@
+.heroCard {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 20px);
+    margin: 0 auto 50px;
+    padding: 10px;
+    box-shadow: $card-shadow;
+    max-width: 1080px;
+    background-color: $color-white;
+
+    @include tablet {
+        flex-direction: row;
+        padding: 20px;
+    }
+
+    &__image {
+        position: relative;
+        width: 50%;
+        height: 120px;
+        align-self: center;
+
+        @include tablet {
+            height: 200px;
+        }
+    }
+
+    &__description {
+        p {
+            margin: 3px 0;
+        }
+    }
+
+    &__content {
+        flex: 1;
+    }
+    
+    &__footer {
+        display: flex;
+        flex-direction: column;
+
+        @include largePhone {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+    &__ctas {
+        display: flex;
+        flex-direction: column;
+
+        @include largePhone {
+            flex-direction: row;
+        }
+        
+        li {
+            &:first-child {
+                margin-bottom: 10px;
+
+                @include largePhone {
+                    margin-bottom: 0;
+                    margin-right: 10px;
+                }
+                
+            }
+            
+        }
+    }
+    
+    &__title {
+        color: $color-red;
+        @include font(24px, 600);
+        
+        @include desktop {
+            @include font(36px, 600);
+        }
+    }
+
+    &__price {
+        @include font(20px, 600);
+        color: $color-black;
+        margin-bottom: 0;
+    }
+
+    &__no-price {
+        @include font(18px, 600);
+        color: $color-black;
+        margin-bottom: 0;
+    }
+}
+
+.heroCard--loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 430px;
+}

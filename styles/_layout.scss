@@ -1,0 +1,26 @@
+.layout-container {
+    position: relative;
+    width: calc(100% - 20px);
+    max-width: 1045px;
+    margin: 0 auto;
+}
+
+.content-container {
+    width: 100%;
+    margin: 0 auto;
+    background-color: $color-white;
+    box-shadow: $card-shadow;
+    padding: 20px;
+
+    @include desktop {
+        padding: 25px 45px;
+    }
+
+    a {
+        border-bottom: 2px solid $color-red;
+    }
+}
+
+section {
+    margin: 0 auto 90px;
+}

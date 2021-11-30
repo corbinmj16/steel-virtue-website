@@ -1,0 +1,142 @@
+header {
+    background-color: $color-white;
+    margin-bottom: 40px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+
+    &__items {
+        display: inline-flex;
+        align-items: center;
+    }
+
+    &__button {
+        position: relative;
+        border: none;
+        background: none;
+        width: 30px;
+        height: 30px;
+
+        svg {
+            position: absolute;
+            top: 0;
+            right: 10px;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        @include tablet {
+            display: none;
+        }
+    }
+
+    &__logo {
+        background-image: url('/images/logo.jpg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 195px;
+        height: 90px;
+        text-indent: -999px;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &__bg-mobile {
+        display: none;
+
+        &.open {
+            display: flex;
+        }
+        
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        background: $color-red;
+        width: 100vw;
+        height: 100vh;
+        left: 0;
+        bottom: 0;
+        top: 0;
+        margin: 0;
+        z-index: 99;
+
+        @include tablet {
+            display: block;
+            position: relative;
+            background: none;
+            width: auto;
+            height: auto;
+        }
+    }
+
+    &__close-button {
+        position: absolute;
+        top: 32px;
+        right: 11px;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        @include tablet {
+            display: inline-flex;
+            flex-direction: row;
+        }
+
+        > li {
+            @include font(24px, 400);
+            text-align: center;
+            margin-bottom: 30px;
+            order: 2;
+            
+            @include tablet {
+                @include font(16px, 400);
+                margin-right: 30px;
+                margin-bottom: 0;
+                text-align: left;
+                order: 1;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            > a {
+                padding-bottom: 5px;
+                color: $color-white;
+
+                @include tablet {
+                    color: $color-black;
+                }
+
+                &:hover,
+                &:focus {
+                    color: $color-black;
+                    border-bottom: 2px solid $color-black;
+                    
+                    @include tablet {
+                        color: $color-red;
+                        border-bottom: 2px solid $color-red;
+                    }
+                }
+            }
+        }
+
+        .nav__search {
+            order: 1;
+            @include tablet {
+                order: 2;
+            }
+        }
+    }
+}

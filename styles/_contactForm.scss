@@ -1,0 +1,32 @@
+.form {
+    flex: 1;
+
+    &__row {
+        display: flex;
+        flex-direction: column;
+        margin: 0 0 20px;
+
+        input,
+        textarea {
+            border: 1px solid $color-black;
+        }
+
+        label {
+            display: inline-block;
+        }
+
+        textarea {
+            min-height: 100px;
+            resize: none;
+        }
+
+        button {
+            max-width: 120px;
+
+            &:disabled {
+                background-color: rgb(160, 160, 160);
+                cursor: not-allowed;
+            }
+        }
+    }
+}

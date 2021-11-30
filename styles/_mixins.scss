@@ -1,0 +1,27 @@
+$large-phone-width: 400px;
+$tablet-width: 880px;
+$desktop-width: 1024px;
+
+@mixin largePhone {
+  @media (min-width: #{$large-phone-width}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin font($size, $weight) {
+    font-family: 'Inter', sans-serif;
+    font-size: $size;
+    font-weight: $weight;
+}

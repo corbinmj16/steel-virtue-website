@@ -1,0 +1,34 @@
+.search {
+  position: relative;
+
+  &__input {
+    @include font(16px, 400);
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: $color-black;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 100%;
+    width: 40px;
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+    }
+
+    @include tablet {
+      background: $color-red;
+    }
+
+    svg {
+      position: absolute;
+    }
+  }
+}

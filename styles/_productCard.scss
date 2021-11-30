@@ -1,0 +1,104 @@
+.productCards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    @include tablet {
+        flex-direction: row;
+    }
+}
+
+.productCard {
+    display: flex;
+    flex-direction: column;
+    background-color: $color-white;
+    box-shadow: $card-shadow;
+    width: 100%;
+    margin-bottom: 20px;
+
+    @include tablet {
+        width: 49%;
+    }
+
+    &__image {
+        position: relative;
+        width: calc(100% - 30px);
+        height: 150px;
+        margin: 10px auto 0;
+        
+        @include tablet {
+            width: 100%;
+            height: 200px;
+        }
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        padding: 0 20px 20px;
+
+        @include desktop {
+            padding: 0 25px 25px;
+        }
+    }
+
+    &__title {
+        @include font(20px, 600);
+        margin: 0;
+        line-height: 35px;
+
+        &:hover {
+            color: $color-red;
+        }
+    }
+
+    &__price {
+        @include font(24px, 600);
+        color: $color-black;
+        margin-bottom: 0;
+        align-self: center;
+    }
+
+    &__no-price {
+        @include font(18px, 600);
+        color: $color-black;
+        margin-bottom: 0;
+        align-self: center;
+    }
+    
+    &__ctas {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0;
+
+        @include largePhone {
+            flex-direction: row;
+        }
+        
+        li {
+            &:first-child {
+                margin-bottom: 10px;
+
+                @include largePhone {
+                    margin-bottom: 0;
+                    margin-right: 10px;
+                }
+                
+            }
+            
+        }
+    }
+}
+
+.productCard-footer {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+
+    @include largePhone {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
